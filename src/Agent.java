@@ -42,8 +42,9 @@ public class Agent {
 			this.compTick = 0;
 			for(Intpo i : computed) {
 				
-					g.fillRect(i.x*Tile.WIDTH+10+Tile.WIDTH/4, i.y*Tile.HEIGHT+10+Tile.HEIGHT/4, 
-									(int)(Tile.WIDTH*.5), (int)(Tile.HEIGHT*.5)); 
+					g.fillRect((int)(i.x*Tile.WIDTH+10+Tile.WIDTH/4), 
+							(int)(i.y*Tile.HEIGHT+10+Tile.HEIGHT/4), 
+							(int)(Tile.WIDTH*.5), (int)(Tile.HEIGHT*.5)); 
 				
 				
 				
@@ -55,7 +56,7 @@ public class Agent {
 			
 				for(Intpo i : this.currentPath.steps) {
 					g.fillRect((int)(i.x*Tile.WIDTH+10+Tile.WIDTH/4d), (int)(i.y*Tile.HEIGHT+10+Tile.HEIGHT/4d), 
-							Tile.WIDTH/2, Tile.HEIGHT/2); 
+							(int)(Tile.WIDTH/2), (int)(Tile.HEIGHT/2)); 
 				
 			}
 		}
@@ -65,30 +66,30 @@ public class Agent {
 		int[] yCoords = new int[3];
 		
 		switch(this.orientation) {
-		case 0: xCoords[0] = this.x*Tile.WIDTH + Tile.WIDTH/2;
-				yCoords[0] = this.y*Tile.HEIGHT + Tile.HEIGHT;
-				xCoords[1] = this.x*Tile.WIDTH;
-				yCoords[1] = this.y*Tile.HEIGHT;
-				xCoords[2] = this.x*Tile.WIDTH + Tile.WIDTH;
-				yCoords[2] = this.y*Tile.HEIGHT; break;
-		case 1: xCoords[0] = this.x*Tile.WIDTH + Tile.WIDTH;
-				yCoords[0] = this.y*Tile.HEIGHT + Tile.HEIGHT/2;
-				xCoords[1] = this.x*Tile.WIDTH;
-				yCoords[1] = this.y*Tile.HEIGHT + Tile.HEIGHT;
-				xCoords[2] = this.x*Tile.WIDTH;
-				yCoords[2] = this.y*Tile.HEIGHT; break;
-		case 2: xCoords[0] = this.x*Tile.WIDTH + Tile.WIDTH/2;
-				yCoords[0] = this.y*Tile.HEIGHT;
-				xCoords[1] = this.x*Tile.WIDTH;
-				yCoords[1] = this.y*Tile.HEIGHT + Tile.HEIGHT;
-				xCoords[2] = this.x*Tile.WIDTH + Tile.WIDTH;
-				yCoords[2] = this.y*Tile.HEIGHT + Tile.HEIGHT; break;
-		case 3: xCoords[0] = this.x*Tile.WIDTH;
-				yCoords[0] = this.y*Tile.HEIGHT + Tile.HEIGHT/2;
-				xCoords[1] = this.x*Tile.WIDTH + Tile.WIDTH;
-				yCoords[1] = this.y*Tile.HEIGHT;
-				xCoords[2] = this.x*Tile.WIDTH + Tile.WIDTH;
-				yCoords[2] = this.y*Tile.HEIGHT+ Tile.HEIGHT; break;
+		case 0: xCoords[0] = (int)(this.x*Tile.WIDTH + Tile.WIDTH/2);
+				yCoords[0] = (int) (this.y*Tile.HEIGHT + Tile.HEIGHT);
+				xCoords[1] = (int) (this.x*Tile.WIDTH);
+				yCoords[1] = (int) (this.y*Tile.HEIGHT);
+				xCoords[2] = (int) (this.x*Tile.WIDTH + Tile.WIDTH);
+				yCoords[2] = (int) (this.y*Tile.HEIGHT); break;
+		case 1: xCoords[0] = (int) (this.x*Tile.WIDTH + Tile.WIDTH);
+				yCoords[0] = (int) (this.y*Tile.HEIGHT + Tile.HEIGHT/2);
+				xCoords[1] = (int) (this.x*Tile.WIDTH);
+				yCoords[1] = (int) (this.y*Tile.HEIGHT + Tile.HEIGHT);
+				xCoords[2] = (int) (this.x*Tile.WIDTH);
+				yCoords[2] = (int) (this.y*Tile.HEIGHT); break;
+		case 2: xCoords[0] = (int) (this.x*Tile.WIDTH + Tile.WIDTH/2);
+				yCoords[0] = (int) (this.y*Tile.HEIGHT);
+				xCoords[1] = (int) (this.x*Tile.WIDTH);
+				yCoords[1] = (int) (this.y*Tile.HEIGHT + Tile.HEIGHT);
+				xCoords[2] = (int) (this.x*Tile.WIDTH + Tile.WIDTH);
+				yCoords[2] = (int) (this.y*Tile.HEIGHT + Tile.HEIGHT); break;
+		case 3: xCoords[0] = (int) (this.x*Tile.WIDTH);
+				yCoords[0] = (int) (this.y*Tile.HEIGHT + Tile.HEIGHT/2);
+				xCoords[1] = (int) (this.x*Tile.WIDTH + Tile.WIDTH);
+				yCoords[1] = (int) (this.y*Tile.HEIGHT);
+				xCoords[2] = (int) (this.x*Tile.WIDTH + Tile.WIDTH);
+				yCoords[2] = (int) (this.y*Tile.HEIGHT+ Tile.HEIGHT); break;
 		}
 		
 		xCoords[0] += 10 + this.xoffset; xCoords[1] += 10 + this.xoffset; xCoords[2] += 10 + this.xoffset;

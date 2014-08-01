@@ -10,6 +10,8 @@ public class Main extends JFrame {
 
 	public Main() {
 		
+		Window.frames = 0;
+		
 		setDefaultCloseOperation(3);
 		setSize(1175, 645);
 	    setLocationRelativeTo(null);
